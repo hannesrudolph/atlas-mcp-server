@@ -57,7 +57,7 @@ export class AtlasMcpServer {
         ConfigManager.initialize({
             storage: {
                 dir: storageDir,
-                sessionId: crypto.randomUUID()
+                sessionId: process.env.SESSION_ID || crypto.randomUUID()
             }
         });
 
